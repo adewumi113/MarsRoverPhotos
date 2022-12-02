@@ -1,6 +1,14 @@
+let intervalId;    
+    
     document.querySelector('button').addEventListener('click', getFetch)
 
 function getFetch(){
+        document.getElementById('aka').innerText = '';
+        document.querySelector('img').src = '';
+        document.getElementById('lop').innerText = '';
+        document.querySelector('i').innerText = '';
+        clearInterval(intervalId);
+
   const choice = document.querySelector('input').value
   console.log(choice)
 
@@ -12,11 +20,11 @@ function getFetch(){
         console.log(data.photos)
 
         let i = 0;
-      const intervalId = setInterval(() => {
+      intervalId = setInterval(() => {
       // Set the slide stuff here with document.querySelectors
-        document.querySelector('h2').innerText = data.photos[i].id
+        document.getElementById('aka').innerText = data.photos[i].id
         document.querySelector('img').src = data.photos[i].img_src
-        document.querySelector('h3').innerText = data.photos[i].camera.full_name
+        document.getElementById('lop').innerText = data.photos[i].camera.full_name
         document.querySelector('i').innerText = data.photos[i].rover.status
 
         i = i === data.photos.length-1 ? 0 : i+1;

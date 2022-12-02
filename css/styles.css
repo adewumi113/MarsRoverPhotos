@@ -6,8 +6,11 @@ img {
     height: 40%;
     width: 40%;
 }
-p, span {
-    font-size: large;
+p, span, input, button{
+    font-size: x-large;
+}
+i{
+    font-size: larger;
 }
 h1{
     font-size: xx-large;
