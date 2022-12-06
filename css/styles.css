@@ -1,0 +1,15 @@
+html{
+    font-size: 62.5%
+ }
+
+img {
+    height: 40%;
+    width: 40%;
+}
+p, span {
+    font-size: large;
+}
+h1{
+    font-size: xx-large;
+}
+
